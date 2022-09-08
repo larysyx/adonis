@@ -1,8 +1,8 @@
-import { schema, rules, CustomMessages } from '@ioc:Adonis/Core/Validator'
+import { schema, CustomMessages, rules } from '@ioc:Adonis/Core/Validator'
 import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 
-export default class RegisterUserValidator {
-  constructor(protected ctx: HttpContextContract) { }
+export default class ReceitasValidator {
+  constructor(protected ctx: HttpContextContract) {}
 
   /*
    * Define schema to validate the "shape", "type", "formatting" and "integrity" of data.
@@ -24,19 +24,17 @@ export default class RegisterUserValidator {
    *    ```
    */
   public schema = schema.create({
-    name: schema.string({}, [
+    titulo: schema.string({},[
       rules.required()
     ]),
-    email: schema.string({}, [
-      rules.required(),
-      rules.email(),
-      rules.unique({ table: 'users', column: 'email' })
+    tipo: schema.string({},[
+      rules.required()
     ]),
-    password: schema.string({}, [
-      rules.required(),
-      rules.minLength(4)
-    ])
+    recita: schema.string({},[
+      rules.required()
+    ]),
   })
+  
 
   /**
    * Custom messages for validation failures. You can make use of dot notation `(.)`
@@ -50,8 +48,6 @@ export default class RegisterUserValidator {
    *
    */
   public messages: CustomMessages = {
-    required: "O {{field}} é obrigatório para se registrar!!!",
-    'email.unique': "E-mail já cadastrado!!!",
-    'minLength': "Tamanho de senha inválida"
+    required: "O {{field}} é obrigatório para cadastrar o tópico!!!!",
   }
 }

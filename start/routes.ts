@@ -24,5 +24,8 @@ Route.get('/', async () => {
   return { hello: 'world' }
 })
 
-Route.post("/register", "AuthController.register")
+Route.post("/register","AuthController.register")
 Route.post("/login", "AuthController.login")
+Route.group(() => {
+   Route.resource("receita", "ReceitasController").apiOnly()
+}).middleware('auth')
