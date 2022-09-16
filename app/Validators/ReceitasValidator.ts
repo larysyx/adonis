@@ -30,7 +30,7 @@ export default class ReceitasValidator {
     tipo: schema.string({},[
       rules.required()
     ]),
-    recita: schema.string({},[
+    receita: schema.string({},[
       rules.required()
     ]),
   })

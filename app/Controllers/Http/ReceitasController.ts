@@ -1,7 +1,7 @@
  
 import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
-import Receitas from '../../Models/Receitas'
-import ViagemValidator from '../../Validators/ReceitasValidator'
+import Receitas from '../../Models/Receita'
+import ReceitasValidator from '../../Validators/ReceitasValidator'
 
 
 export default class ReceitasController {
@@ -26,10 +26,12 @@ export default class ReceitasController {
      }
    
      public async update({ request, params, response }: HttpContextContract) {
-       const { name } = await request.validate(ReceitasValidator)
+       const { titulo,receita,tipo } = await request.validate(ReceitasValidator)
        try {
          const receitas = await Receitas.findOrFail(params.id)
-         receitas.name = name
+         receitas.titulo = titulo
+         receitas.receita = receita
+         receitas.tipo = tipo
          await receitas.save()
          return receitas
    
@@ -40,9 +42,9 @@ export default class ReceitasController {
    
      public async destroy({ params, response }: HttpContextContract) {
        try {
-         const Receitas = await Receitas.findOrFail(params.id)
-         await Receitas.delete()
-         return Receitas
+         const receitas = await Receitas.findOrFail(params.id)
+         await receitas.delete()
+         return receitas
        } catch (error) {
          response.status(400).send("Receita não encontrada!!!")
        }
