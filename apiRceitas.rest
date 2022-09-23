@@ -1,0 +1,38 @@
+######### Cadastro Tópico
+POST http://127.0.0.1:3333/receita HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer MQ.yayHIRtELY11OpJB9wKRYJj02eGva1B04ENzyeWZJ2YAC_yRHTeYTMt9aDFh
+
+{
+    "titulo": "torta salgada" ,
+    "tipo": "para toda familia",
+    "receita": "modo de preparo"
+}
+
+######### Listar todos os Tópico
+GET http://127.0.0.1:3333/receita HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer MQ.yayHIRtELY11OpJB9wKRYJj02eGva1B04ENzyeWZJ2YAC_yRHTeYTMt9aDFh
+
+
+######### Listar Tópico específico
+GET http://127.0.0.1:3333/receita/4 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer MQ.yayHIRtELY11OpJB9wKRYJj02eGva1B04ENzyeWZJ2YAC_yRHTeYTMt9aDFh
+
+######### Alterar Tópico
+PUT http://127.0.0.1:3333/receita/4 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer MQ.yayHIRtELY11OpJB9wKRYJj02eGva1B04ENzyeWZJ2YAC_yRHTeYTMt9aDFh
+
+{
+    "titulo": "bomba de chocolate",
+    "tipo": "doce",
+    "receita": "modo de preparo"
+
+}
+
+######### Apagar Tópico
+DELETE http://127.0.0.1:3333/receita/5 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer MQ.yayHIRtELY11OpJB9wKRYJj02eGva1B04ENzyeWZJ2YAC_yRHTeYTMt9aDFh
