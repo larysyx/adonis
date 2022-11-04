@@ -1,7 +1,7 @@
 ######### Cadastro Tópico
 POST http://127.0.0.1:3333/receita HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer Mg.zT9WTV18hyqJbuca7KFuCt5BTxI6_KAezyJIRMDJP_MRbOKIan3xYdKawi6t
+Authorization: Bearer MQ.7-iiD40U_cgDNfW4ABpFqm96m88iUrMeDYYxSW6_DYGLzdIXnIX4sAGB7n_Q
 
 {
     "titulo": "torta salgada" ,
@@ -12,18 +12,18 @@ Authorization: Bearer Mg.zT9WTV18hyqJbuca7KFuCt5BTxI6_KAezyJIRMDJP_MRbOKIan3xYdK
 ######### Listar todos os Tópico
 GET http://127.0.0.1:3333/receita HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer Mg.zT9WTV18hyqJbuca7KFuCt5BTxI6_KAezyJIRMDJP_MRbOKIan3xYdKawi6t
+Authorization: Bearer MQ.7-iiD40U_cgDNfW4ABpFqm96m88iUrMeDYYxSW6_DYGLzdIXnIX4sAGB7n_Q
 
 
 ######### Listar Tópico específico
 GET http://127.0.0.1:3333/receita/1 HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer Mg.zT9WTV18hyqJbuca7KFuCt5BTxI6_KAezyJIRMDJP_MRbOKIan3xYdKawi6t
+Authorization: Bearer MQ.7-iiD40U_cgDNfW4ABpFqm96m88iUrMeDYYxSW6_DYGLzdIXnIX4sAGB7n_Q
 
 ######### Alterar Tópico
 PUT http://127.0.0.1:3333/receita/1 HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer Mg.zT9WTV18hyqJbuca7KFuCt5BTxI6_KAezyJIRMDJP_MRbOKIan3xYdKawi6t
+Authorization: Bearer MQ.7-iiD40U_cgDNfW4ABpFqm96m88iUrMeDYYxSW6_DYGLzdIXnIX4sAGB7n_Q
 
 {
     "titulo": "bomba de chocolate",
@@ -35,4 +35,4 @@ Authorization: Bearer Mg.zT9WTV18hyqJbuca7KFuCt5BTxI6_KAezyJIRMDJP_MRbOKIan3xYdK
 ######### Apagar Tópico
 DELETE http://127.0.0.1:3333/receita/ HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer Mg.zT9WTV18hyqJbuca7KFuCt5BTxI6_KAezyJIRMDJP_MRbOKIan3xYdKawi6t
+Authorization: Bearer MQ.7-iiD40U_cgDNfW4ABpFqm96m88iUrMeDYYxSW6_DYGLzdIXnIX4sAGB7n_Q
